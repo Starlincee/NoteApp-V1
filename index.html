@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapılacaklar Listesi | Heskan</title>
+    <meta name="description" content="Online yapılacaklar listesi oluştur. Program indirmeden tamamen online bir şekilde yapılacaklar listenizi oluşturabilirsiniz | heskan.com">
+    <meta name="keywords" content="Yapılacaklar listesi oluştur, Online todo list, online yapılacaklar listesi">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="css/all.css" rel="stylesheet">
+    <style>
+        *{
+            transition: .2s ease-in-out;
+        }
+        a{
+            color:black;
+        }
+        .btnMode{
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            line-height: 52px;
+            border:none;
+            background: #343a40;
+            color:#fff;
+            outline: none;
+            border-radius: 0;
+            border-radius: 40px 0 0 40px;
+            font-weight: bold;
+        }
+        .btnWhite{
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            line-height: 52px;
+            border:none;
+            background: #fff;
+            color:#343a40;
+            outline: none;
+        }
+        .titleDark{
+            background: #343a40;
+            color:#fff;
+        }
+        .titleTodoListDark{
+            color:#fff;
+        }
+        .hrDark{
+            border-color:rgba(255, 255, 255, 0.6);
+        }
+
+        #header-title{
+            font-weight: bold;
+        }
+        .card.row{
+            background: #fff;
+            border: none;
+        }
+        .fa-check{
+            margin-right: 5px;
+            color: #4cd137;
+        }
+
+        .fa-remove{
+            color: #e84118;
+        }
+
+        .text-color-red{
+            color:#e84118;
+        }
+        .linkDiv{
+            position: relative;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        #shareDiv{
+            padding:20px 0;
+            box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0,0,0,.03);
+        }
+        
+
+        @media screen and (min-width: 480px) {
+            .col-md-6{
+                margin-bottom: 15px;
+            }
+        }
+        @media screen and (max-width: 479px) {
+            .col-md-6{
+                margin-bottom: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card row">
+        <h4 id="header-title" class="card-header text-center">Yapılacaklar Listesi</h4>
+        <input class="btnMode" type="button" value="KOYU MOD" onclick="nightMode()">
+       
+        
+    </div>
+    <br>
+    
+    <div class="row">
+        <div id="todoAdd" class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Todo Ekle</h5><hr> -->
+                    <form id="todo-form">
+                        <input class="form-control" id="todoInput" type="text" placeholder="Yapılacak bir şey ekle!">
+                        <button type="submit" id="submit" class="btn btn-primary mt-2 btn-block">Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="todoList" class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="todo-listesi">Listem</h5><hr>
+                    <input id="filter" class="form-control mb-2" placeholder="Listede Ara..." type="text">
+                    <ul id="todo-list" class="list-group">
+                        <!-- <li class="list-group-item">
+                            <a href="#"><i class="fa fa-check"></i></a>
+                            selam
+                            <a href="#" class="pull-right"><i class="fa fa-remove"></i></a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                    <input type="button" id="clear-todos" class="btn btn-danger btn-block" value="Hepsini Temizle">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+<!-- <div id="shareDiv" class="text-center">
+<h6 id="darkH6">Listeni Paylaş</h6><hr>
+<a id="whatsapp" class="btn btn-success" href="" target="_blank">WHATSAPP</a>
+</div> -->
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+
+
+<script src="main.js"></script>
+<script src="darkmode.js"></script>
+
+
+</body>
+</html>
