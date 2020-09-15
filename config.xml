@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.coderBoyss.noteAppp14"
+    id          = "com.coderBoyss.noteAppp13"
     versionCode = "1"
     version     = "2.0.0" >
 
@@ -10,13 +10,13 @@
   <name>Note App</name>
 
   <description>
-      Todo-list Note App ile Günlük Notlarýnýzý Alabilirsiniz.
+     Todo-list
   </description>
 
   <author href="www.CoderBoyss.xyz" email="ahmetatalay95@gmail.com">
      Ahmet Eren Atalay
   </author>
     
-  <icon src="img/icon.png"/>
+  <icon src="img/icon.png" />
 
 </widget>
