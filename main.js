@@ -8,7 +8,7 @@ const submitBtn = document.querySelector('#submit');
 const todoListesi = document.querySelector('#todo-listesi');
 const filter = document.querySelector('#filter');
 const whatsapp = document.querySelector('#whatsapp');
-
+const listItem = document.querySelector('.list-group-item');
 
 
 
@@ -86,19 +86,19 @@ function addTodoToUI(newTodo){
     const newaRemove = document.createElement('a');
     newaRemove.href = "#";
     newaRemove.className = "pull-right"
+     newaRemove.innerHTML = '<img class="fas fa-remove float-right"style="margin-top:6px;"src="img/delete.png">'
 
     //i oluşturma
     const newiRemove = document.createElement('i');
-    newiRemove.className = "fa fa-remove";
-
+   
     //aCheck link oluşturma
     const newaCheck = document.createElement('a');
     newaCheck.href = "#";
+     newaCheck.innerHTML = '<img class="fas fa-check" src="img/check.png ">'
 
     //iCheck oluşturma
     const newiCheck = document.createElement('i');
-    newiCheck.className = "fa fa-check";
-
+   
     newLi.prepend(newaCheck);
     newaCheck.appendChild(newiCheck);
     newLi.appendChild(newaRemove);
@@ -130,17 +130,20 @@ function getTodosFromStorage(){
 
 //Arayüzden item silme
 function deleteTodoUI(e){
-    if(e.target.className === "fa fa-remove"){
-        e.target.parentElement.parentElement.remove();
+
+    if(e.target.className === "fas fa-remove float-right"){
+    	if (confirm('Emin misiniz')) {
+           e.target.parentElement.parentElement.remove();
         deleteTodoFromStorage(e.target.parentElement.parentElement.textContent);
         showAlertBtnClear('info','Silindi!');
+    };
     }
     counterItem();//Eleman silince Liste eleman sayısını güncelle
 }
 
 //Tamamlanan görev
 function completedItem(e){
-    if(e.target.className === "fa fa-check"){
+    if(e.target.className === "fas fa-check"){
         
         const contentItem = e.target.parentElement.parentElement;
         contentItem.style.color = "gray";
